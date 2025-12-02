@@ -26,7 +26,6 @@ export default function App() {
           placeholder="Your text will appear here..."
           value={text}
           readOnly
-          data-testid="output"
           style={{
             width: "100%",
             padding: "0.5rem",
@@ -43,7 +42,7 @@ export default function App() {
           <button
             className="key"
             onClick={handleBackspace}
-            data-testid="backspace"
+            data-testid="back"
             style={{ padding: "0.3rem 0.8rem", fontSize: "0.9rem", cursor: "pointer" }}
           >
             Backspace
@@ -54,7 +53,7 @@ export default function App() {
             <button
               key={char}
               className="key"
-              data-testid={`key-${char}`}
+              data-testid={char}
               onClick={() => handleClick(char)}
               style={{
                 padding: "0.5rem",
@@ -63,7 +62,6 @@ export default function App() {
                 borderRadius: "4px",
                 border: "1px solid #ccc",
                 backgroundColor: "#fff",
-                userSelect: "none",
                 color: "black"
               }}
             >
