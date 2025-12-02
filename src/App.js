@@ -20,12 +20,8 @@ export default function App() {
         Click letters (or use your keyboard) to build text.
       </p>
       <div style={{ maxWidth: "600px", margin: "0 auto", background: "#fff", padding: "1rem", borderRadius: "8px", boxShadow: "0 0 10px #ccc" }}>
-        <input
-          type="text"
+        <div
           className="output"
-          placeholder="Your text will appear here..."
-          value={text}
-          readOnly
           style={{
             width: "100%",
             padding: "0.5rem",
@@ -33,11 +29,11 @@ export default function App() {
             borderRadius: "4px",
             border: "1px solid #ccc",
             marginBottom: "1rem",
-            boxSizing: "border-box",
-            color: "black",
             backgroundColor: "white"
           }}
-        />
+        >
+          {text}
+        </div>
         <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1rem" }}>
           <button
             className="key"
