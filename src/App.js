@@ -36,7 +36,6 @@ export default function App() {
         </div>
         <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1rem" }}>
           <button
-            className="key"
             onClick={handleBackspace}
             data-testid="back"
             style={{ padding: "0.3rem 0.8rem", fontSize: "0.9rem", cursor: "pointer" }}
