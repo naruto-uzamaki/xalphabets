@@ -32,7 +32,7 @@ export default function App() {
             backgroundColor: "white"
           }}
         >
-          {text}
+          <span data-testid="output-text">{text}</span>
         </div>
         <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "1rem" }}>
           <button
