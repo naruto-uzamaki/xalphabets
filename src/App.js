@@ -45,7 +45,7 @@ export default function App() {
           </button>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(13, 1fr)", gap: "0.5rem" }}>
-          {alphabets.map((char) => (
+          {alphabets.slice(0, 13).map((char) => (
             <button
               key={char}
               className="key"
@@ -64,6 +64,29 @@ export default function App() {
               {char}
             </button>
           ))}
+
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(13, 1fr)", gap: "0.5rem" }}>
+          {alphabets.slice(13).map((char) => (
+            <button
+              key={char}
+              className="key"
+              data-testid={char}
+              onClick={() => handleClick(char)}
+              style={{
+                padding: "0.5rem",
+                fontWeight: "bold",
+                cursor: "pointer",
+                borderRadius: "4px",
+                border: "1px solid #ccc",
+                backgroundColor: "#fff",
+                color: "black"
+              }}
+            >
+              {char}
+            </button>
+          ))}
+
         </div>
       </div>
     </div>
